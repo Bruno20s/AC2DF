@@ -1,0 +1,18 @@
+<h2>Lista de Tarefas</h2>
+<ul>
+   @for (tarefa of tarefas; track tarefa.nome) {
+      <li>
+         Nome: {{ tarefa.nome }} - Descriçao: {{ tarefa.descricao }} - Status: {{ tarefa.concluido }}
+         <button (click)="remover(tarefas.indexOf(tarefa))">Remover</button>
+         <button (click)="marcarConcluida(tarefas.indexOf(tarefa))">Concluir</button>
+      </li>
+   }
+</ul>
+
+<h3>Número de Tarefas: {{ contador }}</h3>
+@if(contador === 0) {
+   <h2>Não tem nenhuma tarefa cadastrada</h2>
+}
+@if(contador > 0 && contador <= 5) {
+   <h2>Você tem poucas tarefas cadastradas</h2>
+}
