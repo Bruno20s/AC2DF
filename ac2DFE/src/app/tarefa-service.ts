@@ -12,8 +12,8 @@ export interface Tarefa {
 
 export class TarefaService {
    private tarefas = [
-      { nome: 'Jogar o lixo', descricao: 'Jogar na casa do vizinho', concluido: false },
-      { nome: 'Jogar bola', descricao: 'Jogar bola do vizinho', concluido: false }
+      { nome: 'dar comida pro cachorro', descricao: 'ração para o cachorro', concluido: false },
+      { nome: 'fazer bolo', descricao: 'fazer bolo de aniversario', concluido: false }
    ]
 
    contador: number = this.tarefas.length
